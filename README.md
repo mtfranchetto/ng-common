@@ -1,0 +1,1 @@
+#Angular common module
