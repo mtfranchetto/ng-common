@@ -4,6 +4,7 @@
   "devDependencies": {
     "angular": "git+https://bitbucket.org/mtfranchetto/angular",
     "browserify": "^4.0.0",
+    "browserify-istanbul": "^0.1.2",
     "browserify-shim": "^3.7.0",
     "gulp": "^3.8.7",
     "gulp-jshint": "~1.5.5",
@@ -27,7 +28,8 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-istanbul"
     ]
   },
   "browserify-shim": {
