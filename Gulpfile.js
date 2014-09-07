@@ -16,7 +16,9 @@ gulp.task('test', function (done) {
     karma.start({
         configFile: __dirname + KARMA_CONFIG,
         singleRun: false
-    }, done);
+    }, function () {
+    	gulp.start('test');
+    });
 });
 
 gulp.task('default', ['test']);

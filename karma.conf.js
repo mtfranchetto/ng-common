@@ -19,7 +19,7 @@ module.exports = function(config) {
     },
     preprocessors: {
         'test/*': ['browserify'],
-        'scripts/*': ['coverage']
+        'lib/*': ['coverage']
     },
     coverageReporter: {
       type : 'html',
