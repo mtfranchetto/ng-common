@@ -1,7 +1,7 @@
 {
   "name": "ng-common",
   "version": "0.1.0",
-  "devDependencies": {
+  "dependencies": {
     "angular": "git+https://bitbucket.org/mtfranchetto/angular",
     "browserify": "^4.0.0",
     "browserify-istanbul": "^0.1.2",
