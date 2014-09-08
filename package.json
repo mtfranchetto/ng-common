@@ -31,8 +31,7 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim",
-      "browserify-istanbul"
+      "browserify-shim"
     ]
   },
   "browserify-shim": {
