@@ -1,8 +1,7 @@
 {
   "name": "ng-common",
   "version": "0.1.0",
-  "devDependencies": {
-    "angular": "git+https://bitbucket.org/mtfranchetto/angular",
+  "dependencies": {
     "browserify": "^4.0.0",
     "browserify-istanbul": "^0.1.2",
     "browserify-shim": "^3.7.0",
@@ -16,12 +15,16 @@
     "karma-coverage": "^0.2.6",
     "karma-jasmine": "~0.2.0",
     "karma-phantomjs-launcher": "^0.1.4",
-    "sinon": "git+https://bitbucket.org/mtfranchetto/sinon",
     "underscore": "^1.7.0"
   },
+  "devDependencies": {
+    "angular": "git+https://bitbucket.org/mtfranchetto/angular",
+    "sinon": "git+https://bitbucket.org/mtfranchetto/sinon"
+  },
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "underscore": "./node_modules/underscore/underscore-min.js"
+    "jquery": "jquery/dist/jquery.min.js",
+    "underscore": "underscore/underscore-min.js",
+    "angular": "angular"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -34,6 +37,7 @@
   },
   "browserify-shim": {
     "jquery": "$",
-    "underscore": "_"
+    "underscore": "_",
+    "angular": "angular"
   }
 }
