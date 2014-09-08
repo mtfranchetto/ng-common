@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "angular": "git+https://bitbucket.org/mtfranchetto/angular",
-    "sinon": "git+https://bitbucket.org/mtfranchetto/sinon",
+    "sinon": "git+https://bitbucket.org/mtfranchetto/sinon"
   },
   "browser": {
     "jquery": "jquery/dist/jquery.min.js",
