@@ -1,10 +1,10 @@
 "use strict";
 
 var TestModel = function () {
-    this._user = "";
-    this._password = "";
-    this._others = [],
-    this._testModel = {};
+    this.user = "";
+    this.password = "";
+    this.others = [],
+    this.testModel = {};
 }
 
 module.exports = TestModel;

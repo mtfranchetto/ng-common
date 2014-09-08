@@ -1,5 +1,7 @@
 'use strict';
 
+var _ = require('underscore');
+
 describe('GSON', function () {
 
     var Gson = require('../lib/io/Gson'),
@@ -13,8 +15,8 @@ describe('GSON', function () {
             };
 
         var obj = gson.deserialize(json, TestModel);
-        expect(obj._user).toEqual("john");
-        expect(obj._password).toEqual("doe");
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
         expect(obj instanceof TestModel).toBeTruthy();
     });
 
@@ -32,10 +34,10 @@ describe('GSON', function () {
             };
 
         var obj = gson.deserialize(json, TestModel);
-        expect(obj._user).toEqual("john");
-        expect(obj._password).toEqual("doe");
-        expect(obj._others[0]._user).toEqual("foo");
-        expect(obj._others[0]._password).toEqual("bar");
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
+        expect(obj.others[0].user).toEqual("foo");
+        expect(obj.others[0].password).toEqual("bar");
         expect(obj instanceof TestModel).toBeTruthy();
     });
 
@@ -59,12 +61,12 @@ describe('GSON', function () {
             };
 
         var obj = gson.deserialize(json, TestModel);
-        expect(obj._user).toEqual("john");
-        expect(obj._password).toEqual("doe");
-        expect(obj._others[0]._user).toEqual("foo");
-        expect(obj._others[0]._password).toEqual("bar");
-        expect(obj._others[0]._others[0]._user).toEqual("test");
-        expect(obj._others[0]._others[0]._password).toEqual("test");
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
+        expect(obj.others[0].user).toEqual("foo");
+        expect(obj.others[0].password).toEqual("bar");
+        expect(obj.others[0].others[0].user).toEqual("test");
+        expect(obj.others[0].others[0].password).toEqual("test");
         expect(obj instanceof TestModel).toBeTruthy();
     });
 
@@ -80,10 +82,10 @@ describe('GSON', function () {
             };
 
         var obj = gson.deserialize(json, TestModel);
-        expect(obj._user).toEqual("john");
-        expect(obj._password).toEqual("doe");
-        expect(obj._testModel._user).toEqual("foo");
-        expect(obj._testModel._password).toEqual("bar");
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
+        expect(obj.testModel.user).toEqual("foo");
+        expect(obj.testModel.password).toEqual("bar");
         expect(obj instanceof TestModel).toBeTruthy();
     });
 
@@ -91,9 +93,38 @@ describe('GSON', function () {
         var gson = new Gson([TestModel]),
             json = "foobar";
         var obj = gson.deserialize(json, TestModel);
-        expect(obj._user).toEqual("");
-        expect(obj._password).toEqual("");
-        expect(obj._others.length).toEqual(0);
+        expect(obj.user).toEqual("");
+        expect(obj.password).toEqual("");
+        expect(obj.others.length).toEqual(0);
+        expect(obj instanceof TestModel).toBeTruthy();
+    });
+
+    it('should deserialize/serialize/deserialize correctly', function () {
+        var gson = new Gson([TestModel]),
+            json = {
+                "user": "john",
+                "password": "doe",
+                "testModel": {
+                    "user": "foo",
+                    "password": "bar"
+                }
+            };
+
+        var obj = gson.deserialize(json, TestModel);
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
+        expect(obj.testModel.user).toEqual("foo");
+        expect(obj.testModel.password).toEqual("bar");
+        expect(obj instanceof TestModel).toBeTruthy();
+
+        json = gson.serialize(obj);
+        expect(_.isString(json)).toBeTruthy();
+
+        obj = gson.deserialize(json, TestModel);
+        expect(obj.user).toEqual("john");
+        expect(obj.password).toEqual("doe");
+        expect(obj.testModel.user).toEqual("foo");
+        expect(obj.testModel.password).toEqual("bar");
         expect(obj instanceof TestModel).toBeTruthy();
     });
 
