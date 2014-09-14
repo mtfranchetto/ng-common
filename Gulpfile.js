@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 var KARMA_CONFIG = '/karma.conf.js';
 
 gulp.task('lint', function () {
-    gulp.src('scripts/*.js')
+    gulp.src('lib/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
