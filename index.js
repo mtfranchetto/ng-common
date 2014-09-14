@@ -13,8 +13,10 @@ module.exports = {
         SettingsManager: require('./lib/io/SettingsManager')
     },
     net: {
-        Cache: require('./lib/net/Cache'),
-        MemCache: require('./lib/net/MemCache'),
+        CacheProvider: require('./lib/net/CacheProvider'),
+        MemCacheProvider: require('./lib/net/MemCacheProvider'),
+        BaseHttpClient: require('./lib/net/BaseHttpClient'),
+        MemCacheHttpClient: require('./lib/net/MemCacheHttpClient'),
         HttpClient: require('./lib/net/HttpClient'),
         GsonParser: require('./lib/net/GsonParser'),
         Parser: require('./lib/net/Parser'),
