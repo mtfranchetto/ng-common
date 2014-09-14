@@ -1,19 +1,7 @@
-##Browserify-compliant AngularJS distribution
+##ng-common
 
-Includes:
-* Angular main package
-* Mocks package
-* Resource package
-* Animate package
-* Route package
-* Sanitize package
+Common module to start AngularJS applications.
 
-### Working with [browserify shim](https://github.com/thlorenz/browserify-shim)
-
-Just drop a single line in package.json file:
-
-`"browserify-shim": {
-    "browserify-angular": "angular"
-  }`
+Have a look at **[ng-boilerplate-app](https://github.com/mtfranchetto/ng-boilerplate-app)**.
 
 
