@@ -1,6 +1,7 @@
 {
   "name": "ng-common",
   "version": "0.1.0",
+  "description": "Common module to start AngularJS applications",
   "dependencies": {
     "inherits": "^2.0.1",
     "jquery": "^2.1.1",
