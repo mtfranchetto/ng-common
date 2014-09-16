@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('underscore');
+require('underscore');
 
 describe('GSON', function () {
 
