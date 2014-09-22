@@ -2,6 +2,7 @@
 
 module.exports = {
     inherits: require('inherits'),
+    BaseBootstrapper: require('./lib/BaseBootstrapper'),
     BaseExecutor: require('./lib/BaseExecutor'),
     ValueHolder: require('./lib/ValueHolder'),
     ConsoleLogger: require('./lib/ConsoleLogger'),
@@ -23,7 +24,8 @@ module.exports = {
         RequestHandler: require('./lib/net/RequestHandler')
     },
     angular: {
-        ScopeInvoker: require('./lib/angular/ScopeInvoker')
+        ScopeInvoker: require('./lib/angular/ScopeInvoker'),
+        ProviderTypes: require('./lib/angular/ProviderTypes')
     }
 
 };
