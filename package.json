@@ -26,20 +26,9 @@
     "karma-phantomjs-launcher": "^0.1.4"
   },
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "underscore": "./node_modules/underscore/underscore-min.js",
     "angular": "browserify-angular"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "$",
-    "underscore": "_"
   }
 }
