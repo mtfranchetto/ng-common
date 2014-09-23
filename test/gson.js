@@ -1,6 +1,6 @@
 'use strict';
 
-require('underscore');
+var _ = require('lodash');
 
 describe('GSON', function () {
 
