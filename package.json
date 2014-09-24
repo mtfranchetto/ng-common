@@ -33,7 +33,14 @@
     },
     "browserify": {
         "transform": [
+            "browserify-shim",
             "debowerify"
         ]
+    },
+    "browser": {
+        "angular": "./bower_components/angular/angular.js"
+    },
+    "browserify-shim": {
+        "angular": "angular"
     }
 }
