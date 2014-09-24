@@ -17,7 +17,7 @@ module.exports = function(config) {
     browserify: {
       watch: true,
       debug: true,
-      transform: ['browserify-shim', 'browserify-istanbul']
+      transform: ["debowerify", 'browserify-istanbul']
     },
     preprocessors: {
         'test/*': ['browserify'],
