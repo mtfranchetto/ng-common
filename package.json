@@ -17,13 +17,7 @@
         "browserify-shim": "^3.7.0",
         "debowerify": "^0.8.1",
         "gulp": "^3.8.7",
-        "gulp-jshint": "~1.5.5",
-        "karma": "^0.12.23",
-        "karma-bro": "^0.7.0",
-        "karma-chrome-launcher": "^0.1.4",
-        "karma-coverage": "^0.2.6",
-        "karma-jasmine": "~0.2.0",
-        "karma-phantomjs-launcher": "^0.1.4"
+        "smild": "^0.1.1"
     },
     "scripts": {
         "install": "bower install"
@@ -42,5 +36,8 @@
     },
     "browserify-shim": {
         "angular": "angular"
+    },
+    "smild": {
+        "module": true
     }
 }
