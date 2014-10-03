@@ -25,7 +25,7 @@ module.exports = {
     },
     angular: {
         ScopeInvoker: require('./lib/angular/ScopeInvoker'),
-        ProviderTypes: require('./lib/angular/ProviderTypes')
+        ProviderTypes: require('./lib/angular/ProviderTypes'),
+        DirectiveCreator: require('./lib/angular/DirectiveCreator')
     }
-
 };
