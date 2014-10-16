@@ -7,6 +7,7 @@ module.exports = {
     ValueHolder: require('./lib/ValueHolder'),
     ConsoleLogger: require('./lib/ConsoleLogger'),
     Logger: require('./lib/Logger'),
+    DataRetriever: require('./lib/DataRetriever'),
     io: {
         Gson: require('./lib/io/Gson'),
         JSONSerializer: require('./lib/io/JSONSerializer'),
@@ -20,8 +21,7 @@ module.exports = {
         MemCacheHttpClient: require('./lib/net/MemCacheHttpClient'),
         HttpClient: require('./lib/net/HttpClient'),
         GsonParser: require('./lib/net/GsonParser'),
-        Parser: require('./lib/net/Parser'),
-        RequestHandler: require('./lib/net/RequestHandler')
+        Parser: require('./lib/net/Parser')
     },
     angular: {
         ScopeInvoker: require('./lib/angular/ScopeInvoker'),
