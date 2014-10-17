@@ -5,7 +5,8 @@ var _ = require('lodash');
 describe('GSON', function () {
 
     var Gson = require('../lib/io/Gson'),
-        TestModel = require('./data/TestModel');
+        TestModel = require('./data/TestModel'),
+        Country = require('./data/Country');
 
     it('should return a test model object', function () {
         var gson = new Gson(),
@@ -126,6 +127,33 @@ describe('GSON', function () {
         expect(obj.testModel.user).toEqual("foo");
         expect(obj.testModel.password).toEqual("bar");
         expect(obj instanceof TestModel).toBeTruthy();
+    });
+
+    it('should deserialize correctly an array of data', function () {
+        var gson = new Gson([Country]),
+            json = [
+                {
+                    "id": 4,
+                    "phrase_text": "Afghanistan",
+                    "code": "AF",
+                    "code3": "AFG",
+                    "has_states": false,
+                    "prefix": 93
+                }
+            ];
+
+        var obj = gson.deserialize(json);
+        expect(obj[0].getId()).toEqual(4);
+        expect(obj[0].getName()).toEqual("Afghanistan");
+        expect(obj[0].hasStates()).toBeFalsy();
+    });
+
+    it('should serialize correctly a void array of data', function () {
+        var gson = new Gson([Country]),
+            json = [ ];
+
+        var obj = gson.deserialize(json);
+        expect(obj.length).toEqual(0);
     });
 
 });
