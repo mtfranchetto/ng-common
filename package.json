@@ -7,12 +7,12 @@
         "url": "https://github.com/mtfranchetto/ng-common"
     },
     "dependencies": {
-        "bluebird": "^2.3.10",
         "inherits": "^2.0.1",
         "jquery": "^2.1.1",
         "lodash": "^2.4.1"
     },
     "devDependencies": {
+        "bluebird": "^2.3.10",
         "browserify": "^5.5.0",
         "browserify-istanbul": "^0.1.2",
         "browserify-shim": "^3.7.0",
