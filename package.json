@@ -1,12 +1,13 @@
 {
     "name": "ng-common",
-    "version": "0.6.7",
+    "version": "0.7.0",
     "description": "Common module to start AngularJS applications",
     "repository": {
         "type": "git",
         "url": "https://github.com/mtfranchetto/ng-common"
     },
     "dependencies": {
+        "bluebird": "^2.3.10",
         "inherits": "^2.0.1",
         "jquery": "^2.1.1",
         "lodash": "^2.4.1"
@@ -32,7 +33,8 @@
         ]
     },
     "browser": {
-        "angular": "./bower_components/angular/angular.js"
+        "angular": "./bower_components/angular/angular.js",
+        "bluebird": "./node_modules/bluebird/js/browser/bluebird.js"
     },
     "browserify-shim": {
         "angular": "angular"
