@@ -8,6 +8,7 @@ module.exports = {
     ConsoleLogger: require('./lib/ConsoleLogger'),
     Logger: require('./lib/Logger'),
     DataRetriever: require('./lib/DataRetriever'),
+    Watcher: require('./lib/Watcher'),
     io: {
         Gson: require('./lib/io/Gson'),
         JSONSerializer: require('./lib/io/JSONSerializer'),
@@ -27,6 +28,7 @@ module.exports = {
         ScopeInvoker: require('./lib/angular/ScopeInvoker'),
         ProviderTypes: require('./lib/angular/ProviderTypes'),
         DirectiveCreator: require('./lib/angular/DirectiveCreator'),
-        AngularUtil: require('./lib/angular/AngularUtil')
+        AngularUtil: require('./lib/angular/AngularUtil'),
+        "NavigationChangeWatcher": require('./lib/angular/NavigationChangeWatcher')
     }
 };
