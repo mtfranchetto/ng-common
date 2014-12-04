@@ -148,12 +148,30 @@ describe('GSON', function () {
         expect(obj[0].hasStates()).toBeFalsy();
     });
 
-    it('should serialize correctly a void array of data', function () {
+    it('should deserialize correctly a void array of data', function () {
         var gson = new Gson([Country]),
             json = [ ];
 
         var obj = gson.deserialize(json);
         expect(obj.length).toEqual(0);
+    });
+
+    it("should deserialize correctly a string array", function () {
+        var model = require('./data/PaginationObject'),
+            gson = new Gson([model]),
+            json = require('./data/pagination.json');
+
+        var obj = gson.deserialize(json);
+        expect(obj.getEpcrs().fields).toEqual(["code","serialNumber"]);
+    });
+
+    it("should deserialize correctly a nested string array", function() {
+        var model = require('./data/PaginationObject'),
+            gson = new Gson([model]),
+            json = require('./data/pagination.json');
+
+        var obj = gson.deserialize(json);
+        expect(obj.getEpcrs().pagination.sort).toEqual(["string","string2"]);
     });
 
 });
