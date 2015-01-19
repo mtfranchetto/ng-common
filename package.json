@@ -1,6 +1,6 @@
 {
     "name": "ng-common",
-    "version": "0.7.8",
+    "version": "0.7.9",
     "description": "Common module to start AngularJS applications",
     "repository": {
         "type": "git",
