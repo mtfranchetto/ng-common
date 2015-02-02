@@ -11,6 +11,7 @@ module.exports = {
     Watcher: require('./lib/Watcher'),
     io: {
         Gson: require('./lib/io/Gson'),
+        StrictGson: require('./lib/io/StrictGson'),
         JSONSerializer: require('./lib/io/JSONSerializer'),
         Serializer: require('./lib/io/Serializer'),
         SettingsManager: require('./lib/io/SettingsManager')
