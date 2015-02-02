@@ -23,6 +23,7 @@ module.exports = {
         MemCacheHttpClient: require('./lib/net/MemCacheHttpClient'),
         HttpClient: require('./lib/net/HttpClient'),
         GsonParser: require('./lib/net/GsonParser'),
+        StrictGsonParser: require('./lib/net/StrictGsonParser'),
         Parser: require('./lib/net/Parser')
     },
     angular: {
