@@ -11,6 +11,7 @@ module.exports = {
     Watcher: require('./lib/Watcher'),
     io: {
         Gson: require('./lib/io/Gson'),
+        StrictGson: require('./lib/io/StrictGson'),
         JSONSerializer: require('./lib/io/JSONSerializer'),
         Serializer: require('./lib/io/Serializer'),
         SettingsManager: require('./lib/io/SettingsManager')
@@ -22,6 +23,7 @@ module.exports = {
         MemCacheHttpClient: require('./lib/net/MemCacheHttpClient'),
         HttpClient: require('./lib/net/HttpClient'),
         GsonParser: require('./lib/net/GsonParser'),
+        StrictGsonParser: require('./lib/net/StrictGsonParser'),
         Parser: require('./lib/net/Parser')
     },
     angular: {
