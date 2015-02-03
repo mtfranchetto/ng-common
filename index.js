@@ -24,7 +24,8 @@ module.exports = {
         HttpClient: require('./lib/net/HttpClient'),
         GsonParser: require('./lib/net/GsonParser'),
         StrictGsonParser: require('./lib/net/StrictGsonParser'),
-        Parser: require('./lib/net/Parser')
+        Parser: require('./lib/net/Parser'),
+        Methods: require('./lib/net/Methods')
     },
     angular: {
         ScopeInvoker: require('./lib/angular/ScopeInvoker'),
