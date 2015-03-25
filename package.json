@@ -16,6 +16,7 @@
         "browserify": "~7.0.2",
         "browserify-istanbul": "~0.1.2",
         "browserify-shim": "~3.8.1",
+        "debowerify": "~1.2.0",
         "gulp": "~3.8.7",
         "smild": "~0.10.0"
     },
@@ -27,6 +28,7 @@
     },
     "browserify": {
         "transform": [
+            "debowerify",
             "browserify-shim"
         ]
     },
