@@ -1,16 +1,16 @@
 {
     "name": "ng-common",
-    "version": "0.8.7",
+    "version": "0.8.8",
     "description": "Common module to start AngularJS applications",
     "repository": {
         "type": "git",
         "url": "https://github.com/mtfranchetto/ng-common"
     },
     "dependencies": {
-        "bluebird": "~2.3.10",
-        "inherits": "~2.0.1",
+        "bluebird": "~2.9.0",
+        "inherits": "2.0.1",
         "jquery": "~2.1.1",
-        "lodash": "~2.4.1"
+        "lodash": "~3.5.0"
     },
     "devDependencies": {
         "browserify": "~7.0.2",
