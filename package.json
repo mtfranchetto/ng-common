@@ -1,6 +1,6 @@
 {
     "name": "ng-common",
-    "version": "0.8.12",
+    "version": "0.8.13",
     "description": "Common module to start AngularJS applications",
     "repository": {
         "type": "git",
@@ -10,7 +10,8 @@
         "bluebird": "~2.9.0",
         "inherits": "2.0.1",
         "jquery": "~2.1.1",
-        "lodash": "~3.5.0"
+        "lodash": "~3.5.0",
+        "workerify": "~0.3.0"
     },
     "devDependencies": {
         "browserify": "~7.0.2",
@@ -28,6 +29,7 @@
     },
     "browserify": {
         "transform": [
+        	"workerify",
             "debowerify",
             "browserify-shim"
         ]
